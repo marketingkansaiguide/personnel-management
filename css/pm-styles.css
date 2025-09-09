@@ -1,0 +1,647 @@
+/* Personnel Management Modern Styles */
+.pm-manage-employees,
+.pm-admin-calendar,
+.pm-login-form,
+.pm-employee-calendar {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #2d3748;
+}
+
+/* Typographie */
+.pm-manage-employees h1,
+.pm-employee-calendar h1,
+.pm-manage-employees h2,
+.pm-admin-calendar h2,
+.pm-login-form h2,
+.pm-employee-calendar h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 20px;
+}
+
+.pm-manage-employees h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #4a5568;
+    margin: 30px 0 15px;
+}
+
+/* Tableaux */
+.pm-employee-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    background: #f7fafc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pm-employee-table th,
+.pm-employee-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.pm-employee-table th {
+    background: #edf2f7;
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.pm-employee-table td {
+    font-size: 15px;
+    color: #4a5568;
+}
+
+/* Boutons */
+.pm-employee-table td button,
+.pm-employee-table td input[type="submit"],
+.pm-manage-employees input[type="submit"],
+.pm-login-form input[type="submit"],
+.pm-availability-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    margin-right: 8px;
+}
+
+.pm-employee-table td button,
+.pm-manage-employees input[type="submit"],
+.pm-login-form input[type="submit"],
+.pm-availability-btn {
+    background: #2b6cb0;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pm-employee-table td button:hover,
+.pm-manage-employees input[type="submit"]:hover,
+.pm-login-form input[type="submit"]:hover,
+.pm-availability-btn:hover {
+    background: #2c5282;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pm-employee-table td input[type="submit"],
+.pm-availability-btn.pm-delete-btn {
+    background: #e53e3e;
+    color: #ffffff;
+}
+
+.pm-employee-table td input[type="submit"]:hover,
+.pm-availability-btn.pm-delete-btn:hover {
+    background: #c53030;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Formulaires */
+.pm-manage-employees form,
+.pm-login-form-inner {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pm-manage-employees input[type="text"], .pm-manage-employees input[type="email"], .pm-manage-employees input[type="password"], .pm-admin-calendar select, .pm-admin-calendar input[type="month"], .pm-login-form input[type="text"], .pm-login-form input[type="password"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #2d3748;
+    background: #f7fafc;
+    transition: border-color 0.2s ease;
+}
+
+.pm-manage-employees input[type="text"]:focus,
+.pm-manage-employees input[type="email"]:focus,
+.pm-manage-employees input[type="password"]:focus,
+.pm-admin-calendar select:focus,
+.pm-admin-calendar input[type="month"]:focus,
+.pm-login-form input[type="text"]:focus,
+.pm-login-form input[type="password"]:focus {
+    outline: none;
+    border-color: #2b6cb0;
+    box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.1);
+}
+
+/* Formulaire de connexion */
+.pm-login-form-inner label {
+    font-weight: 500;
+    color: #4a5568;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.pm-login-form-inner p {
+    margin-top: 10px;
+}
+
+.pm-login-form-inner a {
+    color: #2b6cb0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.pm-login-form-inner a:hover {
+    text-decoration: underline;
+}
+
+/* Filtres */
+.pm-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.pm-filters label {
+    font-weight: 500;
+    color: #4a5568;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.pm-filters select,
+.pm-filters input[type="month"] {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    background: #f7fafc;
+    color: #2d3748;
+}
+
+/* Dialogues */
+#pm_status_dialog,
+#pm_comment_dialog,
+#pm_availability_dialog,
+#pm_reserved_dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    display: none;
+    width: 300px;
+    max-width: 90%;
+}
+
+#pm_status_dialog h3,
+#pm_comment_dialog h3,
+#pm_availability_dialog h3,
+#pm_reserved_dialog h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a202c;
+    margin: 0 0 15px;
+}
+
+#pm_status_dialog select,
+#pm_status_dialog textarea,
+#pm_comment_dialog textarea,
+#pm_availability_dialog textarea,
+#pm_reserved_dialog select,
+#pm_reserved_dialog textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    background: #f7fafc;
+    color: #2d3748;
+}
+
+#pm_status_dialog textarea,
+#pm_comment_dialog textarea,
+#pm_availability_dialog textarea,
+#pm_reserved_dialog textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#pm_comment_dialog p,
+#pm_availability_dialog p,
+#pm_reserved_dialog p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #4a5568;
+}
+
+#pm_comment_dialog p strong,
+#pm_availability_dialog p strong,
+#pm_reserved_dialog p strong {
+    color: #2d3748;
+}
+
+#pm_status_dialog button,
+#pm_comment_dialog button,
+#pm_availability_dialog button,
+#pm_reserved_dialog button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+    margin-right: 8px;
+}
+
+#pm_status_dialog button:first-of-type,
+#pm_comment_dialog button,
+#pm_availability_dialog button.pm-availability-btn,
+#pm_reserved_dialog button:first-of-type {
+    background: #2b6cb0;
+    color: #ffffff;
+}
+
+#pm_status_dialog button:first-of-type:hover,
+#pm_comment_dialog button:hover,
+#pm_availability_dialog button.pm-availability-btn:hover,
+#pm_reserved_dialog button:first-of-type:hover {
+    background: #2c5282;
+    transform: translateY(-1px);
+}
+
+#pm_status_dialog button:last-of-type,
+#pm_availability_dialog button.pm-availability-btn.pm-delete-btn,
+#pm_reserved_dialog button:last-of-type {
+    background: #e53e3e;
+    color: #ffffff;
+}
+
+#pm_status_dialog button:last-of-type:hover,
+#pm_availability_dialog button.pm-availability-btn.pm-delete-btn:hover,
+#pm_reserved_dialog button:last-of-type:hover {
+    background: #c53030;
+    transform: translateY(-1px);
+}
+
+#pm_availability_dialog .pm-button-group,
+#pm_reserved_dialog .pm-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Calendrier */
+#pm_calendar_wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+}
+.fc-event-en-attente {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: #ffffff !important;
+}
+.fc-event-réservé {
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+    color: #ffffff !important;
+}
+.fc-event-refusé {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    color: #ffffff !important;
+}
+.fc-event-disponible {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    color: #ffffff !important;
+}
+.fc-event-non-disponible {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: #ffffff !important;
+}
+.pm-availability-dialog select, .pm-status-dialog select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#pm_employee_calendar,
+#pm_admin_calendar {
+    margin-top: 20px;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    overflow-x: auto;
+    position: relative;
+    z-index: 1;
+}
+.fc-event-main span {
+    white-space: normal;
+}
+.fc .fc-toolbar {
+    background: #edf2f7;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.fc .fc-button {
+    background: #2b6cb0;
+    border: none;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.fc .fc-button:hover {
+    background: #2c5282;
+}
+
+.fc .fc-daygrid-day-number {
+    color: #2d3748;
+    font-size: 14px;
+}
+
+.fc .fc-event {
+    border-radius: 4px;
+    font-size: 13px;
+    padding: 4px 6px;
+    border: none;
+    color: #ffffff;
+    min-height: 20px;
+    z-index: 10;
+    line-height: 1.4;
+}
+
+/* Messages d'erreur ou de succès */
+.pm-manage-employees p {
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.pm-manage-employees p:empty {
+    display: none;
+}
+
+.pm-manage-employees p:not(:empty) {
+    background: #e6fffa;
+    color: #2b6cb0;
+    border-left: 4px solid #2b6cb0;
+}
+
+.pm-message {
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.pm-message-success {
+    background: #e6fffa;
+    color: #2b6cb0;
+    border-left: 4px solid #2b6cb0;
+}
+
+.pm-message-error {
+    background: #fff5f5;
+    color: #e53e3e;
+    border-left: 4px solid #e53e3e;
+}
+
+/* Spinner */
+.pm-spinner {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.pm-spinner::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #2b6cb0;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Styles pour la fenêtre modale de confirmation */
+.pm-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.pm-modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pm-modal-content h3 {
+    margin: 0 0 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.pm-modal-content p {
+    margin: 0 0 20px;
+    font-size: 1em;
+}
+
+.pm-modal-content button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.pm-modal-content button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pm-manage-employees,
+    .pm-admin-calendar,
+    .pm-login-form,
+    .pm-employee-calendar {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .pm-employee-table th,
+    .pm-employee-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .pm-filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pm-filters label {
+        margin-bottom: 5px;
+    }
+
+    .pm-manage-employees input[type="text"],
+    .pm-manage-employees input[type="email"],
+    .pm-manage-employees input[type="password"],
+    .pm-admin-calendar select,
+    .pm-admin-calendar input[type="month"],
+    .pm-login-form input[type="text"],
+    .pm-login-form input[type="password"] {
+        max-width: 100%;
+    }
+
+    #pm_availability_controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #pm_employee_calendar,
+    #pm_admin_calendar {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .fc .fc-daygrid-day {
+        min-width: 40px;
+    }
+
+    .fc .fc-daygrid-day-number {
+        font-size: 12px;
+    }
+
+    .fc .fc-event {
+        font-size: 11px;
+        padding: 3px 5px;
+    }
+
+    .fc .fc-toolbar-title {
+        font-size: 16px;
+    }
+
+    .fc .fc-button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .pm-spinner::before {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pm-employee-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .pm-employee-table th,
+    .pm-employee-table td {
+        font-size: 13px;
+    }
+
+    .pm-manage-employees h1,
+    .pm-employee-calendar h1,
+    .pm-manage-employees h2,
+    .pm-login-form h2,
+    .pm-employee-calendar h2 {
+        font-size: 24px;
+    }
+
+    .pm-manage-employees h3 {
+        font-size: 18px;
+    }
+
+    .fc .fc-daygrid-day {
+        min-width: 35px;
+    }
+
+    .fc .fc-daygrid-day-number {
+        font-size: .14em;
+    }
+
+    .fc .fc-event {
+        font-size: .11em;
+        padding: .10em;
+        margin-bottom: .02em;
+    }
+
+    .fc .fc-toolbar-title {
+        font-size: .14em;
+    } 
+
+    .fc .fc-button {
+        padding: .14em;
+        font-size: .11em;
+    }
+
+    .pm-spinner::before {
+        width: .30em;
+        height: .30em;
+    }
+}
